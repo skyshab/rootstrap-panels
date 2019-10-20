@@ -21,7 +21,7 @@ use Hybrid\Contracts\Bootable;
  * @since  1.0.0
  * @access public
  */
-class RootstrapPanels extends Bootable {
+class RootstrapPanels implements Bootable {
 
     /**
      * Stores Resources Path
