@@ -1,0 +1,26 @@
+{
+	"name"        : "skyshab/rootstrap-panels",
+	"description" : "Rootstrap Customize extends Rootstrap to add Customizer tabs, sequences, nested panels and a collection of responsive controls that can be used in a theme.",
+	"keywords"    : [ "wordpress" ],
+	"homepage"    : "https://github.com/skyshab/rootstrap",
+	"license"     : "GPL-2.0-or-later",
+	"authors"     : [
+		{
+			"name"     : "Sky Shabatura",
+			"email"    : "github@sky.camp",
+			"homepage" : "https://github.com/skyshab",
+			"role"     : "Developer"
+		}
+	],
+	"support"     : {
+		"issues" : "https://github.com/skyshab/rootstrap/issues"
+	},
+	"autoload"    : {
+		"psr-4" : {
+			"Rootstrap\\Panels\\" : "src/"
+		}
+	},
+	"require"     : {
+		"php" : ">=5.6"
+	}
+}
