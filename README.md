@@ -1,6 +1,6 @@
-# Rootstrap Customize
+# Rootstrap Panels
 
-Version: 1.2.1
+Version: 1.0.0
 Released: 09/23/2019
 
 ## Description

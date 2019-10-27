@@ -21,7 +21,7 @@ use Hybrid\Contracts\Bootable;
  * @since  1.0.0
  * @access public
  */
-class RootstrapPanels implements Bootable {
+class Manager implements Bootable {
 
     /**
      * Stores Resources Path
@@ -39,7 +39,7 @@ class RootstrapPanels implements Bootable {
      */
     public function boot() {
         // Store resources path
-        $this->resources = vendor_path() . '/rootstrap-panels/dist';
+        $this->resources = vendor_path() . '/skyshab/rootstrap-panels/dist';
         // Add custom control
         add_action( 'rootstrap/customize-register', [ $this, 'customControl' ] );
         // Register tabs
@@ -55,7 +55,7 @@ class RootstrapPanels implements Bootable {
      * @return void
      */
     public function customControl($manager) {
-        require_once './controls/class-rootstrap-custom-panel.php';
+        require_once 'controls/class-rootstrap-custom-panel.php';
     }
 
     /**
@@ -74,7 +74,7 @@ class RootstrapPanels implements Bootable {
      * @since 1.0.0
      */
     public function customizeResources() {
-        wp_enqueue_script( 'rootstrap-custom-panels', $this->resources . '/js/custom-panels.min.js', ['customize-controls', 'jquery'], null, true );
-        wp_enqueue_style( 'rootstrap-customize-customize-controls', $this->resources . '/css/customize-controls.min.css' );
+        wp_enqueue_script( 'rootstrap-custom-panels', $this->resources . '/js/custom-panels.js', ['customize-controls', 'jquery'], null, true );
+        wp_enqueue_style( 'rootstrap-customize-customize-controls', $this->resources . '/css/customize-controls.css' );
     }
 }
