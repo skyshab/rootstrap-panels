@@ -14,6 +14,7 @@
 namespace Rootstrap\Panels;
 
 use Hybrid\Contracts\Bootable;
+use function Rootstrap\vendor_path;
 
 /**
  * RoostrapPanels class
