@@ -1,38 +1,22 @@
 # Rootstrap Panels
 
 Version: 1.0.0
-Released: 09/23/2019
+Released: 10/29/2019
 
 ## Description
 
-Rootstrap Customize extends Rootstrap to add "tabs" and "sequences" to the customizer panels. These are simply interfaces for navigating between customizer sections.
+Rootstrap Panels adds a custom panel type in the customizer that can be nested multiple levels deep.
 
 ## Requirements
 
-* Rootstrap v1.1.0+
-* WordPress 5.0+
-* PHP 7.0+
+* WordPress 5.0+.
+* Hybrid Core 5.1+
+* Rootstrap 2.0+
 * [Composer](https://getcomposer.org/) for managing PHP dependencies.
 
 ## Features
 
-Rootstrap is a collection of tools for use when implementing the WordPress Customize API in
-your theme or plugin. Rootstrap Customize extends Rootstrap to add the following functionality:
-
-* Customizer Section Tabs
-
-  Allows you to create a tabbed interface within sections in the customizer control panel,
-  with the option to add a preview device trigger when opening a tab.
-
-* Customizer Section Sequences
-
-  Allows you to add a navigation bar with arrow navigation to the top of customizer sections.
-  Has options to show or hide the sections in the panel, reverse the order of the navigation, display
-  prev/next labels, and add a preview device trigger.
-
-* Nested Customizer Panels
-
-  Allows creating nested panels within the customizer to further organize customizer sections.
+Nested Customizer Panels: Allows creating nested panels within the customizer to further organize customizer sections.
 
 
 ### Installation
@@ -40,12 +24,12 @@ your theme or plugin. Rootstrap Customize extends Rootstrap to add the following
 Use the following command from your command line to install the package.
 
 ```
-composer require skyshab/rootstrap-customize
+composer require skyshab/rootstrap-panels
 ```
 
 ## Documentation
 
-Read the project wiki: https://github.com/skyshab/rootstrap-customize/wiki
+Read the project wiki: https://github.com/skyshab/rootstrap-panels/wiki
 
 Quick screencast of devices, tabs and section sequences: https://youtu.be/htPsjFDnnXQ
 

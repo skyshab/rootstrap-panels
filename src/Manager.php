@@ -14,6 +14,7 @@
 namespace Rootstrap\Panels;
 
 use Hybrid\Contracts\Bootable;
+use WP_Customize_Manager;
 use function Rootstrap\vendor_path;
 
 /**
@@ -25,26 +26,19 @@ use function Rootstrap\vendor_path;
 class Manager implements Bootable {
 
     /**
-     * Stores Resources Path
-     *
-     * @since 1.0.0
-     * @var array
-     */
-    private $resources;
-
-    /**
      * Load resources.
      *
      * @since 1.0.0
      * @return object
      */
     public function boot() {
-        // Store resources path
-        $this->resources = vendor_path() . '/skyshab/rootstrap-panels/dist';
+
         // Add custom control
         add_action( 'rootstrap/customize-register', [ $this, 'customControl' ] );
+
         // Register tabs
         add_action( 'rootstrap/customize-register/custom', [ $this, 'registerPanels' ] );
+
         // Load customize control resources
         add_action( 'customize_controls_enqueue_scripts', [ $this, 'customizeResources' ] );
     }
@@ -55,7 +49,7 @@ class Manager implements Bootable {
      * @since 1.0.0
      * @return void
      */
-    public function customControl($manager) {
+    public function customControl( WP_Customize_Manager $manager) {
         require_once 'controls/class-rootstrap-custom-panel.php';
     }
 
@@ -65,7 +59,7 @@ class Manager implements Bootable {
      * @since 1.0.0
      * @return void
      */
-    public function registerPanels($manager) {
+    public function registerPanels( WP_Customize_Manager $manager) {
         $manager->register_panel_type( 'Rootstrap_Custom_Panel' );
     }
 
@@ -75,7 +69,8 @@ class Manager implements Bootable {
      * @since 1.0.0
      */
     public function customizeResources() {
-        wp_enqueue_script( 'rootstrap-panels', $this->resources . '/js/customize-controls.js', ['customize-controls', 'jquery'], null, true );
-        wp_enqueue_style( 'rootstrap-panels', $this->resources . '/css/customize-controls.css' );
+        $resources = vendor_path() . '/skyshab/rootstrap-panels/dist';
+        wp_enqueue_script( 'rootstrap-panels', $resources . '/js/customize-controls.js', ['customize-controls', 'jquery'], null, true );
+        wp_enqueue_style( 'rootstrap-panels', $resources . '/css/customize-controls.css' );
     }
 }
