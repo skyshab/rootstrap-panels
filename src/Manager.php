@@ -34,32 +34,24 @@ class Manager implements Bootable {
     public function boot() {
 
         // Add custom control
-        add_action( 'rootstrap/customize-register', [ $this, 'customControl' ] );
-
-        // Register tabs
-        add_action( 'rootstrap/customize-register/custom', [ $this, 'registerPanels' ] );
+        add_action( 'rootstrap/customize-register',         [ $this, 'customizeRegister' ] );
 
         // Load customize control resources
-        add_action( 'customize_controls_enqueue_scripts', [ $this, 'customizeResources' ] );
+        add_action( 'customize_controls_enqueue_scripts',   [ $this, 'customizeResources' ] );
     }
 
     /**
-     * Load file that contains our customizer control for sequences.
+     * Customize register functionality
      *
      * @since 1.0.0
      * @return void
      */
-    public function customControl( WP_Customize_Manager $manager) {
+    public function customizeRegister( WP_Customize_Manager $manager) {
+
+        // Load custom panel file
         require_once 'controls/class-rootstrap-custom-panel.php';
-    }
 
-    /**
-     * Register the custom panel
-     *
-     * @since 1.0.0
-     * @return void
-     */
-    public function registerPanels( WP_Customize_Manager $manager) {
+        // Register custom panel
         $manager->register_panel_type( 'Rootstrap_Custom_Panel' );
     }
 
