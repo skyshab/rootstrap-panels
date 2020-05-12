@@ -6,7 +6,7 @@
  *
  * @package   Rootstrap\Customize
  * @author    Sky Shabatura
- * @copyright Copyright (c) 2019, Sky Shabatura
+ * @copyright Copyright (c) 2020, Sky Shabatura
  * @link      https://github.com/skyshab/rootstrap
  * @license   http://www.gnu.org/licenses/old-licenses/gpl-2.0.html
  */
@@ -46,10 +46,10 @@ class Manager implements Bootable {
      * @since 1.0.0
      * @return void
      */
-    public function customizeRegister( WP_Customize_Manager $manager) {
+    public function customizeRegister( WP_Customize_Manager $manager ) {
 
         // Load custom panel file
-        require_once 'controls/class-rootstrap-custom-panel.php';
+        require_once 'Rootstrap_Custom_Panel.php';
 
         // Register custom panel
         $manager->register_panel_type( 'Rootstrap_Custom_Panel' );

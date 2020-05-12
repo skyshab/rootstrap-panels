@@ -27,10 +27,10 @@
             panels.push( panel );
         });
 
-        panels.sort( api.utils.prioritySort ).reverse();
+        panels.sort( api.utils.prioritySort );
 
         $.each( panels, function( i, panel ) {
-            $( '#sub-accordion-panel-' + panel.params.panel ).children( '.panel-meta' ).after( panel.headContainer );
+            $( '#sub-accordion-panel-' + panel.params.panel ).append( panel.headContainer );
         });
     });
 

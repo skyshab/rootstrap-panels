@@ -21,6 +21,6 @@
 		}
 	},
 	"require"     : {
-        "skyshab/rootstrap" : ">=1.0"
+        "skyshab/rootstrap" : ">=2.0"
 	}
 }
