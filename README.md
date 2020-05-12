@@ -1,7 +1,7 @@
 # Rootstrap Panels
 
-Version: 1.0.0
-Released: 10/29/2019
+Version: 1.1.0
+Released: 05/12/2020
 
 ## Description
 
@@ -31,10 +31,8 @@ composer require skyshab/rootstrap-panels
 
 Read the project wiki: https://github.com/skyshab/rootstrap-panels/wiki
 
-Quick screencast of devices, tabs and section sequences: https://youtu.be/htPsjFDnnXQ
-
 ## Copyright and License
 
 This project is licensed under the [GNU GPL](http://www.gnu.org/licenses/old-licenses/gpl-2.0.html), version 2 or later.
 
-2014-2019 &copy; [Sky Shabatura](https://github.com/skyshab)
+2014-2020 &copy; [Sky Shabatura](https://github.com/skyshab)

@@ -1,47 +1,43 @@
 {
-    "name": "rootstrap-panels",
-    "version": "1.0.0",
-    "description": "Rootstrap module that adds functionality for nestable panels.",
-    "author": "Sky Shabatura",
-    "license": "GPL-2.0+",
-    "homepage": "https://rootstrap.io",
-    "main": "assets/js/customize-controls.js",
-    "scripts": {
-        "build": "npm run prod && npm run i18n && npm run export",
-        "dev": "cross-env NODE_ENV=development node_modules/webpack/bin/webpack.js --progress --hide-modules --config=node_modules/laravel-mix/setup/webpack.config.js",
-        "watch": "cross-env NODE_ENV=development node_modules/webpack/bin/webpack.js --watch --progress --hide-modules --config=node_modules/laravel-mix/setup/webpack.config.js",
-        "watch:sync": "cross-env sync=1 NODE_ENV=development node_modules/webpack/bin/webpack.js --watch --progress --hide-modules --config=node_modules/laravel-mix/setup/webpack.config.js",
-        "hot": "cross-env sync=1 NODE_ENV=development webpack-dev-server --inline --hot --config=node_modules/laravel-mix/setup/webpack.config.js",
-        "prod": "cross-env NODE_ENV=production node_modules/webpack/bin/webpack.js --progress --hide-modules --config=node_modules/laravel-mix/setup/webpack.config.js",
-        "export": "cross-env export=1 NODE_ENV=production node_modules/webpack/bin/webpack.js --progress --hide-modules --config=node_modules/laravel-mix/setup/webpack.config.js",
-        "i18n": "npm run i18n:textdomain && npm run i18n:pot",
-        "i18n:textdomain": "npx wpi18n addtextdomain --exclude=vendor,node_modules",
-        "i18n:pot": "npx wpi18n makepot"
-    },
-    "repository": {
-        "type": "git",
-        "url": "git+https://github.com/skyshab/rootstrap-devices.git"
-    },
-    "bugs": {
-        "url": "https://github.com/skyshab/rootstrap/issues"
-    },
-    "devDependencies": {
-        "lodash": "^4.17.13",
-        "browser-sync": "^2.26.3",
-        "browser-sync-webpack-plugin": "2.2.2",
-        "copy-webpack-plugin": "^4.6.0",
-        "cross-env": "^5.2.0",
-        "imagemin-mozjpeg": "^6.0.0",
-        "imagemin-webpack-plugin": "^2.4.0",
-        "laravel-mix": "^4.0.14",
-        "node-wp-i18n": "^1.2.2",
-        "postcss-preset-env": "^6.5.0",
-        "rimraf": "^2.6.3",
-        "sass": "^1.16.0",
-        "sass-loader": "^7.1.0",
-        "vue-template-compiler": "^2.5.22"
-    },
-    "dependencies": {
-        "classnames": "^2.2.6"
-    }
+  "name": "rootstrap-panels",
+  "version": "1.1.0",
+  "description": "=== Rootstrap Panels === Contributors: skyshab Requires at least: 4.8 Tested up to: 5.3 Stable tag: 5.3 License: GPLv2 or later License URI: http://www.gnu.org/licenses/gpl-2.0.html",
+  "main": "gulpfile.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/skyshab/rootstrap-panels.git"
+  },
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/skyshab/rootstrap/issues"
+  },
+  "homepage": "https://github.com/skyshab/rootstrap#readme",
+  "devDependencies": {
+    "@babel/core": "^7.1.2",
+    "@babel/preset-env": "^7.1.0",
+    "autoprefixer": "^9.1.5",
+    "gulp": "^3.9.1",
+    "gulp-autoprefixer": "^6.0.0",
+    "gulp-babel": "^8.0.0",
+    "gulp-batch": "^1.0.5",
+    "gulp-clean-css": "^3.10.0",
+    "gulp-concat": "^2.6.1",
+    "gulp-merge": "^0.1.1",
+    "gulp-minify": "3.1.0",
+    "gulp-postcss": "^8.0.0",
+    "gulp-rename": "^1.2.2",
+    "gulp-sass": "^4.0.1",
+    "gulp-util": "^3.0.7",
+    "pump": "^3.0.0"
+  },
+  "browserslist": [
+    "defaults"
+  ],
+  "dependencies": {
+    "gulp-uglify": "^3.0.2"
+  }
 }
